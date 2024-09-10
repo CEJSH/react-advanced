@@ -1,10 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import classNames from 'classnames/bind'
+// 왜 From classnames까지만 하면 적용이 안될까
+
+import styles from './App.module.scss'
+
+const cx = classNames.bind(styles)
 
 function App() {
   return (
-    <div className="App">
+    <div className={cx('container')}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,7 +26,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
