@@ -14,3 +14,32 @@ body {
   font-size: 18px;
   font-family: 'NanumDdaAgDanDan';
 }
+.rdp-root {
+  --rdp-font-family: 'NanumDdaAgDanDan';
+  --rdp-accent-color: var(--red);
+  --rdp-accent-background-color: var(--red);
+  thead {
+    th {
+      padding: 12px 0;
+    }
+    .rdp-weekdays {
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+  .rdp-month_caption {
+    display: none;
+  }
+}
+.rdp-weekday {
+  --rdp-weekday-font: 700 16px 'NanumDdaAgDanDan';
+}
+
+.rdp-day_button {
+  cursor: default;
+}
+
+.rdp-selected {
+  font-weight: 700;
+  color: #000;
+}
