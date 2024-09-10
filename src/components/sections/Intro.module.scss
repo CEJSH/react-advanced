@@ -1,0 +1,30 @@
+@import '@scss/utils.scss';
+
+.container {
+  @include txt-content;
+
+  .wrap-couple {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 42px 0 8px;
+
+    .ico-heart {
+      fill: var(--red);
+      width: 18px;
+      height: 18px;
+      margin: 0 6px;
+    }
+  }
+  .ico-flower {
+    width: 30px;
+    margin-bottom: 8px;
+  }
+  .wrap-location {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}

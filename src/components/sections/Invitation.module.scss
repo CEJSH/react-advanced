@@ -1,0 +1,9 @@
+@import '@scss/utils.scss';
+
+.container {
+  @include txt-content;
+}
+.ico-letter {
+  width: 32px;
+  margin: 72px 0 8px;
+}

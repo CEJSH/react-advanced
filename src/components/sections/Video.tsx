@@ -13,6 +13,7 @@ export default function Video() {
         src="/assets/main.mp4"
         width={'100%'}
         loop={true}
+        muted={true}
         poster="/assets/poster.jpeg"
       >
         {/* <source src="/assets/main.mp4" type="video/mp4" /> */}
