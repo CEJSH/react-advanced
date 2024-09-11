@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import classNames from 'classnames/bind'
 import Section from '@shared/Section'
 import styles from './Video.module.scss'
 
