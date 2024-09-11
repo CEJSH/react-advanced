@@ -20,7 +20,7 @@ function App() {
   const [wedding, setWedding] = useState<Wedding | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-  // 1. wedding 데이터 호출
+
   useEffect(() => {
     setLoading(true)
     fetch('http://localhost:8888/wedding')
