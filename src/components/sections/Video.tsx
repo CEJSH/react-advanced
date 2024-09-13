@@ -10,13 +10,13 @@ export default function Video() {
       <video
         controls
         autoPlay={true}
-        src="/assets/main.mp4"
         width={'100%'}
-        loop={true}
-        muted={true}
+        loop
+        muted
         poster="/assets/poster.jpeg"
       >
-        {/* <source src="/assets/main.mp4" type="video/mp4" /> */}
+        <source src="/assets/main.webm" type="video/webm" />
+        <source src="/assets/main.mp4" type="video/mp4" />
       </video>
     </Section>
   )

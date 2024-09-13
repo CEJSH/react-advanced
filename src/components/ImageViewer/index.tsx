@@ -4,6 +4,7 @@ import classNames from 'classnames/bind'
 import 'swiper/css'
 import './swiper.css'
 import Dimmed from '../shared/Dimmed'
+import generateImageUrl from '@/utils/generateImageUrl'
 const cx = classNames.bind(styles)
 
 export default function ImageViewer({
@@ -32,7 +33,22 @@ export default function ImageViewer({
       >
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
-            <img src={src} alt="ImageViewer" />
+            <picture>
+              <source
+                srcSet={generateImageUrl({
+                  filename: src,
+                  format: 'webp',
+                })}
+                type="image/webp"
+              />
+              <img
+                src={generateImageUrl({
+                  filename: src,
+                  format: 'jpg',
+                })}
+                alt={`galleryImage`}
+              />
+            </picture>
           </SwiperSlide>
         ))}
       </Swiper>
