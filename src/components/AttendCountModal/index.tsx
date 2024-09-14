@@ -44,8 +44,7 @@ function AttendCountModal({ wedding }: { wedding: Wedding }) {
         close()
       },
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [open, close, wedding, haveSeenModal])
 
   return null
 }
