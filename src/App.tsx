@@ -1,11 +1,8 @@
 import classNames from 'classnames/bind'
 // 왜 From classnames까지만 하면 적용이 안될까
 import styles from './App.module.scss'
-import { useEffect, useState } from 'react'
-import FullScreenMessage from '@shared/FullScreenMessage'
 import Heading from './components/sections/Heading'
 import Video from './components/sections/Video'
-import { Wedding } from './models/wedding'
 import ImageGallery from './components/sections/ImageGallery'
 import Intro from './components/sections/Intro'
 import Invitation from './components/sections/Invitation'
@@ -19,11 +16,8 @@ import useWedding from './hooks/useWedding'
 const cx = classNames.bind(styles)
 
 function App() {
-  const { wedding, error } = useWedding()
+  const { wedding } = useWedding()
 
-  if (error) {
-    return <FullScreenMessage type="error" />
-  }
   if (wedding == null) return null
   const {
     date,
